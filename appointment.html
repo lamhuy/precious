@@ -1,0 +1,249 @@
+
+      
+	<!-- The reCAPTCHA Ajax script -->
+  	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      
+    
+
+<script>
+	/*     	$(' #timepicker').timepicker({     		
+	 minTime: '10:00am',
+	 maxTime: '6:30pm'    	        	    
+	
+	 }); */
+
+	$('.timepicker').pickatime({
+		interval: 30,
+		//TODO logic for current time or later. 
+		min: [9,00],
+		max: [20,0]
+	});
+
+	$('.datepicker').pickadate({
+		format : 'ddd, mmm dd yy',
+		min : new Date()
+	});
+
+	/*         $(function() {
+	 $( "#datepicker" ).datepicker();
+	 }); */
+	 
+	/*  $(document).ready(function() {
+
+	 $('#example-multiple-selected').multiselect();
+	 }); */
+	 
+</script>
+
+
+      
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron  bgLarge bgRabit">
+		<div class="container">
+	
+			<div class="row ">
+				<div class="col-lg-7">
+				</div>
+				<div class="col-lg-3"></div>
+				<div class="col-lg-2">
+	
+					<div id="opening_time-2" class="opening-time">
+						<div class="time-table">
+							<h3>
+								<span class="icon icons-ornament-left"></span> <span
+									class="light">Business</span> Hours <span
+									class="icon icons-ornament-right"></span>
+							</h3>
+							<div class="inner-bg">
+								<dl class="week-day">
+									<dt>Monday - Friday</dt>
+									<dd>10:00am - 8:00pm</dd>
+								</dl>
+								<dl class="week-day light-bg">
+									<dt>Saturday</dt>
+									<dd>9:00am - 7:00pm</dd>
+								</dl>
+								<dl class="week-day">
+									<dt>Sunday</dt>
+									<dd>11:00am - 6:00pm</dd>
+								</dl>
+							</div>
+							<div align="center" style="margin-top: 6px;">
+								<a target="_blank" href="https://www.google.com/maps/place/830+S+King+St,+Leesburg,+VA+20175/@39.103451,-77.571674,16z/data=!4m2!3m1!1s0x89b6162e73b066e3:0x14a21908bc40376e?ll=39.103451,-77.571674&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=830+S+King+St+Leesburg,+VA+20175">
+								<i class="fa fa-location-arrow icon" style="width: 25px;"></i>
+								<b>830 S King St Leesburg, VA 20175</b></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    
+    
+    <div class="container">
+    
+	    <div class="row">
+	
+			<div class="col-md-6">
+				<h2 style="margin-bottom: 15px">
+					<span class="fa fa-laptop" aria-hidden="true"> </span> Book Online
+				</h2>
+	
+				<form name="form" novalidate class="css-form"
+					ng-submit="form.$valid && submit()">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-6">
+								<input type="text" class="form-control"
+									ng-model="customer.firstName" name="firstName"
+									placeholder="First Name*" required>
+							</div>
+							<div class="col-xs-6">
+								<input type="text" class="form-control"
+									ng-model="customer.lastName" name="lastName"
+									placeholder="Last Name*" required>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+	
+						<div class="row">
+							<div class="col-xs-6">
+								<input type="email" class="form-control"
+									ng-model="customer.email" name="emailInput" placeholder="Email*"
+									required>
+							</div>
+							<div class="col-xs-6">
+								<input type="number" class="form-control"
+									ng-model="customer.phone" name="phoneInput" ng-minlength="10"
+									ng-maxlength="10" placeholder="Phone Number*" required>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+	
+	
+						<div class="row">
+							<div class="col-xs-6">
+								<!-- <input type="text" class="form-control" ng-model="customer.date" id="datepicker" placeholder="Pick a Date*" required> -->
+								<input type="text" class="form-control datepicker"
+									ng-model="customer.date" id="datepicker"
+									placeholder="Pick a Date*" required>
+							</div>
+							<div class="col-xs-6">
+								<!-- <timepicker ng-model="customer.time" ng-change="changed()" hour-step="1" minute-step="30" show-meridian="ismeridian"></timepicker> -->
+								<input type="text" class="form-control timepicker"
+									ng-model="customer.time" placeholder="Pick a Time*" required>
+								<!--         <input type="text" class="form-control timepicker" ng-model="customer.time" id="timepicker" placeholder="Pick a Time*" required /> -->
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+	
+								<select class="form-control" ng-model="customer.tech" ng-change="updateCal()">
+									<option value="" selected>Select technician</option>
+									<option>Kathy</option>
+									<option>Ann</option>
+									<option>Tina</option>
+									<option>Mimi</option>
+									<option>Lee</option>
+									<option>Lisa</option>
+									<option>Steven</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<select class="form-control" ng-model="customer.service">
+									<option value="" disabled selected>Select requested
+										service</option>
+									<option>Manicure</option>
+									<option>Pedicure</option>
+									<option>Waxing</option>
+									<option>Facial</option>
+									<option>Nail Services</option>
+									<option>Children</option>
+									<option></option>
+								</select>
+							</div>
+						</div>
+						<!-- <div class="row">
+							<div class="col-md-12 col-xs-12">
+								<select id="example-multiple-selected" multiple="multiple" class="form-control" ng-model="customer.service">
+								    <option value="1">Option 1</option>
+								    <option value="2" selected="selected">Option 2</option>
+								    Option 3 will be selected in advance ...
+								    <option value="3" selected="selected">Option 3</option>
+								    <option value="4">Option 4</option>
+								    <option value="5">Option 5</option>
+								    <option value="6">Option 6</option>
+								</select>
+							</div>
+						</div> -->
+					</div>
+	
+					<!-- preciousnailspa -->
+					<div class="form-group">
+						<div class="g-recaptcha"
+							data-sitekey="6LcpHiATAAAAAA9XgtXmd4jVSbSyPwDoULcmsWpx"
+							data-callback="recaptchaCallback"></div>
+					</div>
+					
+					<!-- preciousnailspaleesburg	
+					<div class="form-group">
+						<div class="g-recaptcha"
+							data-sitekey="6LdPTSATAAAAABeGf_8Xk_Ad-cmkG6wIxnMzcz39"
+							data-callback="recaptchaCallback"></div>
+					</div> -->
+					
+					<button type="submit" id="submit"
+						ng-disabled="form.$invalid || !validCaptcha"
+						class="btn btn-default">Request a Reservation</button>
+					{{customer.userNote}}
+				</form>
+	
+			</div>
+			
+			<div class="col-md-6">
+				<h2 id="calendarName"><span class="fa fa-calendar" aria-hidden="true"> </span> Precious Calendar</h2>
+				<div id="embeddedCalendar" style="margin-top: 5px;">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h2><span class="fa fa-map-marker" aria-hidden="true"> </span> Location</h2>
+				<div id="gmap">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3096.134062445376!2d-77.57398938464353!3d39.10341787953938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b6162e73b066e3%3A0x14a21908bc40376e!2s830+S+King+St%2C+Leesburg%2C+VA+20175!5e0!3m2!1sen!2sus!4v1453824326936" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<!-- <div class="col-md-4">
+				<h2>
+					<span class="fa fa-gift" aria-hidden="true"> </span> Gift Card
+				</h2>
+				<p>Gift card can be purchased at our salon. Coupons are updated regularly. Please print and bring a copy.</p>
+				<h3>
+					<i class="fa fa-phone"></i> <a href="tel:703-779-1777">(703)
+						779-1777</a>
+				</h3>
+				<h3>
+					<i class="fa fa-envelope"></i> <a href="mailto:preciousnailspaleesburg@gmail.com">preciousnailspaleesburg</a>
+				</h3>
+				<h2>
+				  <a class="has-icon" href="https://www.facebook.com/Precious-Nail-Spa-273764571060/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+			      <a class="has-icon" href="https://www.google.com/search?q=Precious+Nail+%26+Spa,+830+S+King+St,+Leesburg,+VA+20175&ludocid=207091848062272426#lrd=0x89b6162e713882eb:0x2dfbcf047a183aa,1,," target="_blank"><i class="fa fa-google-plus-square"></i></a>
+			      <a class="has-icon" href="http://www.yelp.com/biz/precious-nail-and-spa-leesburg-2" target="_blank"><i class="fa fa-yelp"></i></a>        
+			      <a class="has-icon" href="https://www.youtube.com/watch?v=P0iKzPaYmN8" target="_blank"><i class="fa fa-youtube"></i></a>
+				</h2>
+			</div> -->
+		
+		</div>
+  </div>
+    
