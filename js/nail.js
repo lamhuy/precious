@@ -36,6 +36,11 @@ angular.module('nailApp', ['ui.router', 'app.controllers'])
     controller: 'appointmentController'
   })
   
+  .state('booking', {
+    url: "/booking",    
+    templateUrl: "booking.html"    
+  })
+  
   .state('calendar', {
 	  url: "/calendar",
 	  templateUrl: "calendar.html",
