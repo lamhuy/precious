@@ -1,22 +1,22 @@
 [ {    
     "title" : "Groove Salad",
-    "src" : "lib/audioPlayer/data/01.mp3"
+    "src" : "http://www.preciousnailspaleesburg.com/data/01.mp3"
 
 }, {
     
     "title" : "Secret Agent",
-    "src" : "lib/audioPlayer/data/02.mp3"
+    "src" : "http://www.preciousnailspaleesburg.com/data/02.mp3"
 }, {
     
     "title" : "Indie Pop",
-    "src" : "lib/audioPlayer/data/03.mp3"
+    "src" : "http://www.preciousnailspaleesburg.com/data/03.mp3"
 
 }, {
     
     "title" : "Police Radio",
-    "src" : "lib/audioPlayer/data/04.mp3"
+    "src" : "http://www.preciousnailspaleesburg.com/data/04.mp3"
 
 }, {    
     "title" : "The Trip",
-    "src" : "lib/audioPlayer/data/05.mp3"
+    "src" : "http://www.preciousnailspaleesburg.com/data/05.mp3"
 } ]
