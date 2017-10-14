@@ -1,4 +1,4 @@
-[ {
+{[ {
     freq : '81.4',
     title : "Groove Salad",
     src : 'lib/audioPlayer/data/01.mp3'
@@ -21,4 +21,4 @@
     freq : '107.7',
     title : "The Trip",
     src : 'lib/audioPlayer/data/05.mp3'
-} ]
+} ]}
