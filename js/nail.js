@@ -30,6 +30,11 @@ angular.module('nailApp', ['ui.router', 'app.controllers'])
     templateUrl: "coupon.html"    
   })
   
+  .state('employment', {
+    url: "/employment",    
+    templateUrl: "employment.html"    
+  })
+  
   .state('appointment', {
     url: "/appointment",    
     templateUrl: "appointment.html",
