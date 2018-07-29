@@ -25,11 +25,6 @@ angular.module('nailApp', ['ui.router', 'app.controllers'])
     templateUrl: "gallery.html"    
   })
   
-  .state('coupon', {
-    url: "/coupon",    
-    templateUrl: "coupon.html"    
-  })
-  
   .state('employment', {
     url: "/employment",    
     templateUrl: "employment.html"    
