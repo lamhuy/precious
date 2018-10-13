@@ -15,6 +15,16 @@ angular.module('nailApp', ['ui.router', 'app.controllers'])
     templateUrl: "services.html"    
   })
   
+  .state('lash', {
+    url: "/lash",    
+    templateUrl: "lash.html"    
+  })
+  
+  .state('microblade', {
+    url: "/microblade",    
+    templateUrl: "microblade.html"    
+  })
+  
   .state('team', {
     url: "/team",    
     templateUrl: "team.html"    
