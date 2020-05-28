@@ -15,6 +15,11 @@ angular.module('nailApp', ['ui.router', 'app.controllers'])
     templateUrl: "services.html"    
   })
   
+    .state('consent', {
+    url: "/consent",    
+    templateUrl: "consent.html"    
+  })
+  
   .state('lash', {
     url: "/lash",    
     templateUrl: "lash.html"    
